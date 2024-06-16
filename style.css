@@ -184,20 +184,27 @@ h2 {
  
 
 
+/* Footer Section */
 .footer {
-    background-color: #1F2937;
-    height: 50px;
+    text-align: center;
+    padding: 20px;
+    background-color: deepskyblue;
+    color: white;
 }
 
-.footer .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+.footer p {
+    margin: 0;
 }
 
-.footer-text {
-    color: #F9FAF8;
+.social-media a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+.social-media a:hover {
+    color: #ddd;
 }
 
 /* Services Overview */
