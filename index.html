@@ -16,7 +16,7 @@
                 <a href="index.html">Home</a>
                 <a href="home.html">Services</a>
                 <a href="portfolio.html">Portfolio</a>
-                <a href="about.html">How It Works</a>
+                <a href="about.html">About Us</a>
                 <button class="btnlogin-popup">Contact Us</button>
             </nav>
 
@@ -24,62 +24,75 @@
 
     <div class="wrapper">
         <span class="icon-close"><ion-icon name="close"></ion-icon></span>
-        <div class="form-box login">
-        <h2>Login</h2>
-        <form action="#">
-            <div class="input-box">
-                <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                <input type="email" required>
-                <label>Email</label>
-            </div>
-            <div class="input-box">
-                <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                <input type="password" required>
-                <label>Password</label>
-            </div>
-            <div class="remember-forgot">
-                <label><input type="checkbox">Remember me</label>
-                    <a href="#">Forgot Password?</a>
-            </div>
-            <button type="submit" class="btn">Login</button>
-            <div class="login-register">
-                <p>Don't have an account? <a href="#"
-                class="regiser-link">Register</a></p>
-            </div>
-        </form>
-    </div>
 
     <div class="form-box register">
-        <h2>Registration</h2>
+        <p>Please fill out this form with required information</p>
         <form action="#">
             <div class="input-box">
                 <span class="icon"><ion-icon name="person-add-outline"></ion-icon></span>
                 <input type="text" required>
-                <label>Username</label>
+                <label>First Name</label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="person-add-outline"></ion-icon></span>
+                <input type="text" required>
+                <label>Last Name</label>
             </div>
             <div class="input-box">
                 <span class="icon"><ion-icon name="mail"></ion-icon></span>
                 <input type="email" required>
                 <label>Email</label>
             </div>
-            <div class="input-box">
-                <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                <input type="password" required>
-                <label>Password</label>
-            </div>
-            <div class="remember-forgot">
-                <label><input type="checkbox">I agree to the Terms & Conditions.</label>
+          
+        
+                <legend>Document Type (required)</legend>
+                <label for="personal-account"><input id="personal-account" type="radio" name="account-type" class="inline" checked /> Word Doc/PDF</label>
+                <label for="business-account"><input id="business-account" type="radio" name="account-type" class="inline" /> Powerpoint Slides</label>
                 
-            </div>
-            <button type="submit" class="btn">Register</button>
-            <div class="login-register">
-                <p>Already have an account? <a href="#"
-                class="login-link">Login</a></p>
-            </div>
+             
+            
+            
+                 
+                <label for="upload-doc">Upload Document:
+                
+                    <input id="document" type="file" name="file" /></label>
+                <div class = "details">
+                <label for="pages" id="number-label">Number of pages required: <input id="pages" type="number" name="pages" min="1" max="1000" /></label>
+            
+                <label for="servives">What Services Would you LIke?
+                </div>
+
+                
+                  <select id="dropdown" name="services">
+                    <option value="">(select one)</option>
+                    <option value="1">Writing Services</option>
+                    <option value="2">Research Assistance</option>
+                    <option value="3">EBP Assistance</option>
+                    <option value="4">Case Study Analysis Help
+        </option>
+                  </select>
+                </label>
+                <div class = "details">
+                <label for="bio">Provide a description or suggestion you would like implemented:
+                </div>
+                  <textarea id="bio" name="bio" rows="3" cols="30" placeholder="Document should be in APA..."></textarea>
+                </label>
+                
+          
+             
+
+                <input class="inline" id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" /> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">Terms & Conditions</a>
+            </label>
+            <button type="submit" class="btn">Submit</button>
+
+       
+            
         </form>
         </div>
+    </div>
+    
         
-</div>
+
 
 
 
