@@ -8,6 +8,14 @@
     text-align: center;
 }
 
+html{
+    height: -webkit-fill-available;
+}
+
+body{
+    height: -webkit-fill-available;
+}
+
 .container {
     width: 1100px;
     margin: 0 auto;

@@ -5,100 +5,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DNP Papers Help Services</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Include Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
     <header>
         <h2 class="logo">DNP Papers</h2>
         <nav class="navigation">
-        
-                <a href="index.html">Home</a>
-                <a href="home.html">Services</a>
-                <a href="portfolio.html">Portfolio</a>
-                <a href="about.html">About Us</a>
-                <button class="btnlogin-popup">Contact Us</button>
-            </nav>
-
+            <a href="index.html">Home</a>
+            <a href="home.html">Services</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="about.html">About Us</a>
+            <button class="btnlogin-popup">Contact Us</button>
+        </nav>
     </header>
 
     <div class="wrapper">
         <span class="icon-close"><ion-icon name="close"></ion-icon></span>
 
-    <div class="form-box register">
-        <p>Please fill out this form with required information</p>
-        <form action="https://formsubmit.co/fef46b94f85e0fbd6234e24cd76445c4" method="POST">
-            <div class="input-box">
-                <span class="icon"><ion-icon name="person-add-outline"></ion-icon></span>
-                <input type="text" required>
-                <label>First Name</label>
-            </div>
-            <div class="input-box">
-                <span class="icon"><ion-icon name="person-add-outline"></ion-icon></span>
-                <input type="text" required>
-                <label>Last Name</label>
-            </div>
-            <div class="input-box">
-                <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                <input type="email" required>
-                <label>Email</label>
-            </div>
-          
-        
-                <legend>Document Type (required)</legend>
-                <label for="personal-account"><input id="personal-account" type="radio" name="account-type" class="inline" checked /> Word Doc/PDF</label>
-                <label for="business-account"><input id="business-account" type="radio" name="account-type" class="inline" /> Powerpoint Slides</label>
-                
-             
+        <div class="form-box register">
+            <p>Please fill out this form with the required information</p>
+
+            <form action="https://api.web3forms.com/submit" method="POST" id = "form">
+
+                <input type="hidden" name="access_key" value="edb03228-00d5-4a59-a6ae-4112a19ced0e">  
+
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person-add-outline"></ion-icon></span>
+                    <input type="text" id="first-name" required>
+                    <label for="first-name">First Name</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person-add-outline"></ion-icon></span>
+                    <input type="text" id="last-name" required>
+                    <label for="last-name">Last Name</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" id="email" required>
+                    <label for="email">Email</label>
+                </div>
+
+                <div class = "type">
+                    <legend>Document Type (required)</legend>
+                    <label for="personal-account">
+                        <input id="personal-account" type="radio" name="account-type" class="inline" value="Word Doc/PDF" checked>
+                        Word Doc/PDF
+                    </label>
+                    <label for="business-account">
+                        <input id="business-account" type="radio" name="account-type" class="inline" value="PowerPoint Slides">
+                        PowerPoint Slides
+                    </label>
+                </div>
+
+                  <div class ="upload">
+                  <label for="document">Upload Document:
+                        <input id="document" type="file" name="file">
+                    </label>
+                </div>
+
+                <div class = "pages">
+                    <label for="pages">Number of pages required:
+                        <input id="pages" type="number" name="pages" min="1" max="1000">
+                    </label>
+
+                    </div>
             
-            
-                 
-                <label for="upload-doc">Upload Document:
-                
-                    <input id="document" type="file" name="file" /></label>
-                <div class = "details">
-                <label for="pages" id="number-label">Number of pages required: <input id="pages" type="number" name="pages" min="1" max="1000" /></label>
-            
-                <label for="servives">What Services Would you LIke?
+
+                  <div class = "services">
+                    <label for="dropdown">What Services Would You Like?</label>
+                    <select id="dropdown" name="services">
+                        <option value="">(select one)</option>
+                        <option value="1">Writing Services</option>
+                        <option value="2">Research Assistance</option>
+                        <option value="3">EBP Assistance</option>
+                        <option value="4">Case Study Analysis Help</option>
+                    </select>
                 </div>
 
                 
-                  <select id="dropdown" name="services">
-                    <option value="">(select one)</option>
-                    <option value="1">Writing Services</option>
-                    <option value="2">Research Assistance</option>
-                    <option value="3">EBP Assistance</option>
-                    <option value="4">Case Study Analysis Help
-        </option>
-                  </select>
-                </label>
-                <div class = "details">
-                <label for="bio">Provide a description or suggestion you would like implemented:
-                </div>
-                  <textarea id="bio" name="bio" rows="3" cols="30" placeholder="Document should be in APA..."></textarea>
-                </label>
+                    <label for="bio">Provide a description or suggestion you would like implemented:</label>
+                    <textarea id="bio" name="bio" rows="3" cols="30" placeholder="Document should be in APA..."></textarea>
                 
-          
-             
+                 <div class = "terms-conditions">
+                    <label for="terms" class = "terms-label">
+                        <input id="terms-and-conditions" type="checkbox" class = "inline" required>
+                        I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/" target="_blank" rel="noopener noreferrer" class = "terms-link">Terms & Conditions</a>
+                    </label>
+                </div>
 
-                <input class="inline" id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" /> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">Terms & Conditions</a>
-            </label>
-            <button type="submit" class="btn">Submit</button>
-
-       
-            
-        </form>
+                <button type="submit" class="btn">Submit</button>
+            </form>
         </div>
     </div>
-    
-        
 
-
-
-
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
-<script src="script.js"></script>      
+    <!-- Scripts -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
 </body>
 </html>
